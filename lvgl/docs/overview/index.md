@@ -1,3 +1,7 @@
+```eval_rst
+.. include:: /header.rst 
+:github_url: |github_link_base|/overview/index.md
+```
 
 # Overview
 
@@ -16,14 +20,12 @@
    event
    indev
    display
-   color
    font
    image
    file-system
    animation
    timer
    drawing
-   renderers/index
    new_widget
 ```
 

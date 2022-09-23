@@ -1,3 +1,23 @@
 {
-  "C_Cpp.errorSquiggles": "Disabled"
+    "files.associations": {
+      "lv_examples.h": "c",
+      "lvgl.h": "c",
+      "monitor.h": "c",
+      "mouse.h": "c",
+      "keyboard.h": "c",
+      "mousewheel.h": "c",
+      "lv_demos.h": "c",
+      "lv_demo_music.h": "c",
+      "lv_demo_widgets.h": "c",
+      "lv_demo_widgets.h\u0000widgets.h": "c"
+      },
+    "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",	
+    "terminal.integrated.shellArgs.windows": ["--login"],	
+    "terminal.integrated.env.windows": {	
+      "CHERE_INVOKING": "1",	
+      "MSYSTEM": "MINGW64" 	
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/lvgl",
+    "C_Cpp.errorSquiggles": "Disabled"
+  
 }
