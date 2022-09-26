@@ -3,7 +3,6 @@
 
 void create_header(void)
 {
-
   /*------ MAIN CONTAINER ------*/
   lv_obj_t *header_container;
   header_container = lv_obj_create(lv_scr_act());
@@ -21,8 +20,7 @@ void create_header(void)
   /*------ MAIN CONTAINER ------*/
 
   /*------ HOME BUTTON ------*/
-  lv_obj_t *home_button;
-  home_button = lv_obj_create(header_container);
+  lv_obj_t *home_button = lv_obj_create(header_container);
   lv_obj_set_size(home_button, 35, 35);
   lv_obj_align_to(home_button, header_container, LV_ALIGN_TOP_LEFT, 0, 0);
   lv_obj_set_scrollbar_mode(home_button, LV_SCROLLBAR_MODE_OFF);
@@ -32,16 +30,16 @@ void create_header(void)
   lv_style_set_bg_color(&home_button_style, lv_color_white());
   lv_style_set_border_color(&home_button_style, lv_color_black());
   lv_style_set_radius(&home_button_style, 1);
+  lv_style_set_pad_all(&home_button_style, 0);
   lv_obj_add_style(home_button, &home_button_style, 0);
   /*------ HOME BUTTON ------*/
 
   /*------ IMAGES ------*/
-  LV_IMG_DECLARE(home_logo);
-  lv_obj_t *home = lv_img_create(home_button);
-  lv_img_set_src(home, &home_logo);
-  lv_obj_align_to(home, home_button, LV_ALIGN_CENTER, 5, 5);
-  lv_obj_set_size(home, 20, 20);
-
+  lv_obj_t *home_image = lv_imgbtn_create(home_button);
+  lv_imgbtn_set_src(home_image, LV_IMGBTN_STATE_RELEASED, NULL, &home_logo, NULL);
+  lv_obj_set_width(home_image, 25);
+  lv_obj_set_height(home_image, 25);
+  lv_obj_align_to(home_image, home_button, LV_ALIGN_CENTER, 0, 0);
   /*------ IMAGES ------*/
 
   /*------ UPPER RIGHTMOST LABEL ------*/

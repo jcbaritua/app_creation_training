@@ -1,7 +1,9 @@
 #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
+#include "body_component.h"
 #include "lvgl.h"
 #else
 #include "lvgl.h"
+#include "body_component.h"
 #endif
 
 #ifndef LV_ATTRIBUTE_MEM_ALIGN

@@ -17,7 +17,6 @@
 #include "../lv_drivers/indev/mouse.h"
 #include "../lv_drivers/indev/keyboard.h"
 #include "../lv_drivers/indev/mousewheel.h"
-#include "sample.h"
 #include "header_component.h"
 #include "body_component.h"
 #include "footer_component.h"
@@ -79,6 +78,7 @@ int main(int argc, char **argv)
 
   /*Initialize the HAL (display, input devices, tick) for LVGL*/
   hal_init();
+  lv_obj_clear_flag(lv_scr_act(), LV_OBJ_FLAG_SCROLLABLE);
   create_header();
   create_body();
   create_footer();

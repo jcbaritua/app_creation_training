@@ -94,6 +94,7 @@ void create_body(void)
   lv_style_set_bg_color(&button1_logo_style, lv_palette_main(LV_PALETTE_GREEN));
   lv_style_set_border_color(&button1_logo_style, lv_palette_main(LV_PALETTE_GREEN));
   lv_style_set_radius(&button1_logo_style, 0);
+  lv_style_set_pad_all(&button1_logo_style, 0);
   lv_obj_add_style(button1_logo, &button1_logo_style, 0);
 
   lv_obj_t *button2_logo = lv_obj_create(button2);
@@ -106,6 +107,7 @@ void create_body(void)
   lv_style_set_bg_color(&button2_logo_style, lv_palette_main(LV_PALETTE_LIGHT_BLUE));
   lv_style_set_border_color(&button2_logo_style, lv_palette_main(LV_PALETTE_LIGHT_BLUE));
   lv_style_set_radius(&button2_logo_style, 0);
+  lv_style_set_pad_all(&button2_logo_style, 0);
   lv_obj_add_style(button2_logo, &button2_logo_style, 0);
 
   lv_obj_t *button3_logo = lv_obj_create(button3);
@@ -118,6 +120,7 @@ void create_body(void)
   lv_style_set_bg_color(&button3_logo_style, lv_palette_main(LV_PALETTE_DEEP_ORANGE));
   lv_style_set_border_color(&button3_logo_style, lv_palette_main(LV_PALETTE_DEEP_ORANGE));
   lv_style_set_radius(&button3_logo_style, 0);
+  lv_style_set_pad_all(&button3_logo_style, 0);
   lv_obj_add_style(button3_logo, &button3_logo_style, 0);
 
   lv_obj_t *button4_logo = lv_obj_create(button4);
@@ -132,9 +135,24 @@ void create_body(void)
   lv_style_set_radius(&button4_logo_style, 0);
   lv_obj_add_style(button4_logo, &button4_logo_style, 0);
 
-  LV_IMG_DECLARE(copy_logo);
   lv_obj_t *copy_image = lv_imgbtn_create(button1_logo);
-  lv_obj_align_to(copy_image, button1_logo, LV_ALIGN_TOP_LEFT, 0, 0);
-  lv_obj_set_size(copy_image, 40, 40);
   lv_imgbtn_set_src(copy_image, LV_IMGBTN_STATE_RELEASED, NULL, &copy_logo, NULL);
+  lv_imgbtn_set_src(copy_image, LV_IMGBTN_STATE_PRESSED, NULL, &copy_logo, NULL);
+  lv_obj_set_width(copy_image, 60);
+  lv_obj_set_height(copy_image, 60);
+  lv_obj_align_to(copy_image, button1_logo, LV_ALIGN_CENTER, 0, 0);
+
+  lv_obj_t *fax_image = lv_imgbtn_create(button2_logo);
+  lv_imgbtn_set_src(fax_image, LV_IMGBTN_STATE_RELEASED, NULL, &fax_logo, NULL);
+  lv_imgbtn_set_src(fax_image, LV_IMGBTN_STATE_PRESSED, NULL, &fax_logo, NULL);
+  lv_obj_set_width(fax_image, 60);
+  lv_obj_set_height(fax_image, 60);
+  lv_obj_align_to(fax_image, button2_logo, LV_ALIGN_CENTER, 0, 0);
+
+  lv_obj_t *scan_image = lv_imgbtn_create(button3_logo);
+  lv_imgbtn_set_src(scan_image, LV_IMGBTN_STATE_RELEASED, NULL, &scanner_logo, NULL);
+  lv_imgbtn_set_src(scan_image, LV_IMGBTN_STATE_PRESSED, NULL, &scanner_logo, NULL);
+  lv_obj_set_width(scan_image, 60);
+  lv_obj_set_height(scan_image, 60);
+  lv_obj_align_to(scan_image, button3_logo, LV_ALIGN_CENTER, 0, 0);
 }
